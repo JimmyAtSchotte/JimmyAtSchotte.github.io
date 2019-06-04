@@ -3,8 +3,6 @@ title: Jimmy Mattsson
 layout: default
 ---
 
-# Posts
-
   {% for post in site.posts %}
     {% if post.categories contains 'blog' %}
     <section class="post">
