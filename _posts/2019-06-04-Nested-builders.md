@@ -1,5 +1,5 @@
 ---
-title: Chaining builder-pattern
+title: Nested builder-pattern
 description: How to build a builder that starts another builder
 categories: blog
 ingress: About six months ago, I faced a task where I wanted to chain multiple builders after eachother (a chain of 3 builders actually). I completed the task, but the implementation were real ugly. Today I refactor that code, using this pattern.
@@ -55,7 +55,7 @@ var person = new PersonBuilder()
                         .Build();
 ```
 
-## Adding chaining builders
+## Adding nested builders
 Consider that we want to add children to the Person entity above. It can be accomplish by having a Set method with `Action<PersonBuilder<>` as an argument:
 
 ```csharp
