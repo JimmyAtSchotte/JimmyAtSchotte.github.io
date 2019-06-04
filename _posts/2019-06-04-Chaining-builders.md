@@ -3,13 +3,13 @@ title: Chaining builder-pattern
 description: How to build a builder that starts another builder
 categories: blog
 ---
-#Chaining builder
+# Chaining builder
 About six months ago, I faced a task where I wanted to chain multiple builders after eachother (a chain of 3 builders actually). I completed the task, but the implementation were real ugly. Today I refactor that code, using this pattern.
 
-##First, what is a builder?
+## First, what is a builder?
 The builder pattern is responsible to create an object and set it's properties. It's quite simple in it's simple form, where you have set methods for the properties of an private variable and every method just return itself (this). Finally you have a Build method that returns the object that has been built with the set methods.
 
-```C#
+```csharp
 //Entity
 public class Person
 {
@@ -54,10 +54,10 @@ var person = new PersonBuilder()
                         .Build();
 ```
 
-##Adding chaining builders
+## Adding chaining builders
 Consider that we want to add children to the Person entity above. It can be accomplish by having a Set method with `Action<PersonBuilder<>` as an argument:
 
-```C#
+```csharp
 //Entity
 public class Person
 {
@@ -92,5 +92,5 @@ var person = new PersonBuilder()
                         .Build();
 ```
 
-##Final word
+## Final word
 In my PersonBuilder example, I reuse the same builder. I did so to keep this post a bit shorter, but you can use this pattern to chain any type of builder. 
