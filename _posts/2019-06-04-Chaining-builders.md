@@ -94,5 +94,3 @@ var person = new PersonBuilder()
 
 ## Final word
 In my PersonBuilder example, I reuse the same builder. I did so to keep this post a bit shorter, but you can use this pattern to chain any type of builder. 
-
-[back](./)
