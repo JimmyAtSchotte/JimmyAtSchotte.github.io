@@ -2,6 +2,7 @@
 title: Chaining builder-pattern
 description: How to build a builder that starts another builder
 categories: blog
+ingress: About six months ago, I faced a task where I wanted to chain multiple builders after eachother (a chain of 3 builders actually). I completed the task, but the implementation were real ugly. Today I refactor that code, using this pattern.
 ---
 # Chaining builder
 About six months ago, I faced a task where I wanted to chain multiple builders after eachother (a chain of 3 builders actually). I completed the task, but the implementation were real ugly. Today I refactor that code, using this pattern.
